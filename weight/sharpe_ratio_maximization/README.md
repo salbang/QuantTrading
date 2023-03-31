@@ -37,7 +37,7 @@ $$
 To find the stationary point of $\mathcal{L}$, we get the gradient of it and find the root:
 
 $$
-\nabla_\mathbf{y} \mathcal{L} = \mathbf{\Sigma y} - \lambda \mathbm{\mu} = 0\newline
+\nabla_\mathbf{y} \mathcal{L} = \mathbf{\Sigma y} - \lambda \bm{\mu} = 0\newline
 \nabla_\lambda \mathcal{L} = -\bm{\mu}^\top\mathbf{y} + 1 = 0
 
 $$

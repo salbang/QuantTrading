@@ -39,14 +39,12 @@ To find the stationary point of $\mathcal{L}$, we get the gradient of it and fin
 $$
 \nabla_\mathbf{y} \mathcal{L} = \mathbf{\Sigma y} - \lambda \bm{\mu} = 0\newline
 \nabla_\lambda \mathcal{L} = -\bm{\mu}^\top\mathbf{y} + 1 = 0
-
 $$
 
 Simple solution acquired from the first line of the two equations is:
 
 $$
 \mathbf{y}=\lambda\mathbf{\Sigma}^{-1}\bm{\mu}
-
 $$
 
 Since the original problem is scale invariant with respect to $\mathbf{w}$, it is not important to get the exact $\lambda$. You can just assume $\lambda$ be 1 or any other positive scalar value then scale $\mathbf{y}$ so that $\mathbf{w}$ becomes either $\mathbf{e}^\top\mathbf{w}=1$, where $\mathbf{e}$ is the vector of all 1 as its elements, or  $\|\mathbf{w}\|_1 = 1$. **(Never, ever use the matrix inverse to get the solution!!!)**

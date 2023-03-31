@@ -160,7 +160,7 @@ If you have a turnover matrix $\mathbf{T} \in \mathbb{R}^{m \times n}$, you may 
 <br/><br/>
 $
 \min_{\mathbf{y}, \kappa} ...+\tau \|\mathbf{t}\odot\mathbf{y}\|_1
-$ <br/></br/>
+$ <br/><br/>
 If you are concerned that the minimization of the variance part is quadratic and the turnover penalization is linear, then you may make the turnover penalization quadratic
     
 $$

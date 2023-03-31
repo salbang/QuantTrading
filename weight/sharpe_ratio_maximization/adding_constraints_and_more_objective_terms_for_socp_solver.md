@@ -167,10 +167,9 @@ $$
     $$
     
 2. You may limit the maximum portfolio turnover, $\tau_U$, as constraints:
-    
-    $$
-    \|\mathbf{t}\odot\mathbf{y}\|_1 \le \kappa \tau_U
-    $$
+$$
+\|\mathbf{t}\odot\mathbf{y}\|_1 \le \kappa \tau_U
+$$
     
 
 # Transaction Cost Penalization
@@ -186,7 +185,7 @@ $$
 You may have alphas in distinct categories, such as reversion, momentum, group momentum, earning surprise and etc., and may have much more alphas in some specific categories. In such case, you may limit some categories from getting too much weight allocation.
 
 $$
-\sum_{i \in C_k}y_i \le \kappa w_{C_k} \text{ for } k \in \text{ \{indices of the category you want to limit}\}
+\sum_{i \in C_k}y_i \le \kappa w_{C_k} \text{ for } k \in \{\text{ indices of the category you want to limit}\}
 $$
 
 # Minimum Return Required

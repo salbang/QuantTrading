@@ -157,11 +157,9 @@ This would be implemented as:
 If you have a turnover matrix $\mathbf{T} \in \mathbb{R}^{m \times n}$, you may form an average turnover vector over the time window as $\mathbf{t}:=\frac{1}{m}\mathbf{T}^\top\mathbf{e}$.
 
 1. You can penalize the average portfolio turnover in the objective function with a scalar parameter $\tau$ and Hadamard (a.k.a. element-wise) product $\odot$:
-    
-    $$
+$$
     \min_{\mathbf{y}, \kappa} ...+\tau \|\mathbf{t}\odot\mathbf{y}\|_1
-    $$
-    
+$$
     If you are concerned that the minimization of the variance part is quadratic and the turnover penalization is linear, then you may make the turnover penalization quadratic
     
     $$

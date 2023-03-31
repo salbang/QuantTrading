@@ -164,7 +164,7 @@ $$
 
     If you are concerned that the minimization of the variance part is quadratic and the turnover penalization is linear, then you may make the turnover penalization quadratic
     
-    $$
+$$
     \min_{\mathbf{y},\kappa,t}...+\tau t $$
 $$
     s.t. \space \|\mathbf{t}\odot\mathbf{y}\| <= \sqrt{t}

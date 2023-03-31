@@ -23,7 +23,10 @@ $$
 This is equivalent to:
 
 $$
-\min_{\mathbf{y}} \frac{1}{2}\mathbf{y}^\top \mathbf{\Sigma y} \newline s.t.\space \mathbf{\mu}^T \mathbf{y}=1
+\min_{\mathbf{y}} \frac{1}{2}\mathbf{y}^\top \mathbf{\Sigma y} 
+$$
+$$
+s.t.\space \mathbf{\mu}^T \mathbf{y}=1
 $$
 
 This is a quite simple convex optimization problem. To solve this, we form the Lagrangian of the problem and find the stationary point of it.

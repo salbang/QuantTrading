@@ -1,3 +1,7 @@
+window.MathJax = {
+  loader: {load: ['[tex]/upgreek']},
+  tex: {packages: {'[+]': ['upgreek']}}
+};
 # Sharpe Ratio Maximization with No Constraint
 
 # Solve:

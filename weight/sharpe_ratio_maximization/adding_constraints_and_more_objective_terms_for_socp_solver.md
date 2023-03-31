@@ -3,14 +3,14 @@
 For $m$ time intervals and $n$ signals/alphas,
 
 $$
-\max_\mathbf{w}\frac{\bm{\mu}^\top\mathbf{w}}{\sqrt{\mathbf{w}^\top\mathbf{\Sigma w}}}
+\max_\mathbf{w}\frac{\mathbf{\mu}^\top\mathbf{w}}{\sqrt{\mathbf{w}^\top\mathbf{\Sigma w}}}
 $$
 
 To the above basic formula, we may add constraints such as size limit, upper/lower bounds, long/short balance and etc. Exploiting the scale invariance which is used in the non-constrained case is still useful.
 
 $$
 \min_{\mathbf{y}, \kappa} \frac{1}{2}\mathbf{y}^T \mathbf{\Sigma} \mathbf{y} $$
-$$ s.t.\space \bm{\mu}^\top \mathbf{y}=1 \space\space\space\space\space\space\space\space\space\space(1) $$
+$$ s.t.\space \mathbf{\mu}^\top \mathbf{y}=1 \space\space\space\space\space\space\space\space\space\space(1) $$
 $$
 \kappa \ge 0
 $$
@@ -198,9 +198,9 @@ $$
 For minimum targeting return, $\mu_o$ > 0, noting (1):
 
 $$
-\mu_o \le \bm{\mu}^\top\mathbf{w}  $$
+\mu_o \le \mathbf{\mu}^\top\mathbf{w}  $$
 $$
-\mu_o \le \frac{1}{\kappa}\bm{\mu}^\top\mathbf{y}  $$
+\mu_o \le \frac{1}{\kappa}\mathbf{\mu}^\top\mathbf{y}  $$
 $$
 \kappa \le \frac{1}{\mu_o}
 $$

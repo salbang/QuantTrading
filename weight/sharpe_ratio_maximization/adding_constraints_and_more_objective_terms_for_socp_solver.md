@@ -9,7 +9,9 @@ $$
 To the above basic formula, we may add constraints such as size limit, upper/lower bounds, long/short balance and etc. Exploiting the scale invariance which is used in the non-constrained case is still useful.
 
 $$
-\min_{\mathbf{y}, \kappa} \frac{1}{2}\mathbf{y}^T \mathbf{\Sigma} \mathbf{y} \newline s.t.\space \bm{\mu}^\top \mathbf{y}=1 \space\space\space\space\space\space\space\space\space\space(1) \newline
+\min_{\mathbf{y}, \kappa} \frac{1}{2}\mathbf{y}^T \mathbf{\Sigma} \mathbf{y} $$
+$$ s.t.\space \bm{\mu}^\top \mathbf{y}=1 \space\space\space\space\space\space\space\space\space\space(1) $$
+$$
 \kappa \ge 0
 $$
 
@@ -72,7 +74,8 @@ def max_sharpe(R, turnover, w_L, w_U, diversity_coefficient):
 If you want to have long bias, then you may instead make the sum of the value of the weights 1, i.e.:
 
 $$
-\mathbf{e}^\top\mathbf{y} = \kappa\newline
+\mathbf{e}^\top\mathbf{y} = \kappa$$
+$$
 \kappa \ge 0
 $$
 
@@ -81,7 +84,8 @@ $$
 For $\mathbf{w}_U$, upper bounds, and $\mathbf{w}_L$, lower bounds, simply add:
 
 $$
-\kappa \mathbf{w}_L \le \mathbf{y} \newline
+\kappa \mathbf{w}_L \le \mathbf{y} $$
+$$
 \mathbf{y} \le \kappa \mathbf{w}_U
 $$
 
@@ -125,7 +129,8 @@ We can use the difference of the norm values of $\mathbf{w}$, equivalently $\mat
 A fully diversified portfolio would be allocating equal weight to the alphas. In such case, the norm values would be:
 
 $$
-\|\mathbf{w}\|_2=\bigg(\frac{1}{m}\bigg)^\frac{1}{2} \newline
+\|\mathbf{w}\|_2=\bigg(\frac{1}{m}\bigg)^\frac{1}{2} $$
+$$
 \|\mathbf{w}\|_4=\bigg(\frac{1}{m}\bigg)^\frac{1}{4}
 $$
 
@@ -160,7 +165,8 @@ If you have a turnover matrix $\mathbf{T} \in \mathbb{R}^{m \times n}$, you may 
     If you are concerned that the minimization of the variance part is quadratic and the turnover penalization is linear, then you may make the turnover penalization quadratic
     
     $$
-    \min_{\mathbf{y},\kappa,t}...+\tau t \newline
+    \min_{\mathbf{y},\kappa,t}...+\tau t $$
+$$
     s.t. \space \|\mathbf{t}\odot\mathbf{y}\| <= \sqrt{t}
     $$
     
@@ -192,7 +198,9 @@ $$
 For minimum targeting return, $\mu_o$ > 0, noting (1):
 
 $$
-\mu_o \le \bm{\mu}^\top\mathbf{w}  \newline
-\mu_o \le \frac{1}{\kappa}\bm{\mu}^\top\mathbf{y}  \newline
+\mu_o \le \bm{\mu}^\top\mathbf{w}  $$
+$$
+\mu_o \le \frac{1}{\kappa}\bm{\mu}^\top\mathbf{y}  $$
+$$
 \kappa \le \frac{1}{\mu_o}
 $$

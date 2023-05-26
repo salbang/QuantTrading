@@ -47,9 +47,11 @@ prob = cp.Problem(objective)
 Internally the objective 0.5 * c * cvxpy.sum_squares(f) translates to
 
 $$
-\min_{\mathbf{w}, t, \mathbf{f}} ... + 0.5 * c * t + ... \newline
-s.t. \newline
+\begin{aligned}
+&\min_{\mathbf{w}, t, \mathbf{f}} ... + 0.5 * c * t + ... \\
+&s.t. \space
 \|\mathbf{f}\|\le\sqrt{t}
+\end{aligned}
 $$
 
 It is always better to avoid using cvxpy.quad_form if possible. This way is more than x10 times faster.

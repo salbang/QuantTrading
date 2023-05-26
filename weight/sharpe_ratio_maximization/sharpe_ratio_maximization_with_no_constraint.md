@@ -60,4 +60,4 @@ With constraints, however, two problems result in different solutions.
 
 You may add more terms to the objective function and more constraints to the problem. Refer to:
 
-[Adding Constraints and More Objective Terms for SOCP Solver](Sharpe%20Ratio%20Maximization%20with%20No%20Constraint%2030a3a4e7fb404c6ca9ce19250a6dfa31/Adding%20Constraints%20and%20More%20Objective%20Terms%20for%20SO%20f552e23a0d4143558011a4e0daeff8ec.md)
+[Adding Constraints and More Objective Terms for SOCP Solver](sharpe_ratio_maximization_with_no_constraint.md)

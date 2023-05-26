@@ -118,7 +118,7 @@ $$
 
 , where this would be the same as using the shrunken covariance of $\mathbf{\Sigma}+\lambda\mathbf{I}$  or $(1-\lambda)\mathbf{\Sigma}+\lambda\mathbf{I}$, respectively. Do not form the shrunken covariance explicitly as explained in:
 
-[Speeding up Portfolio Optimization when using SOCP Solver](https://www.notion.so/Speeding-up-Portfolio-Optimization-when-using-SOCP-Solver-072c5c7d380f47d1bf34ddd0f3a1117d)
+[Speeding up Portfolio Optimization when using SOCP Solver](../speeding_up_portfolio_optimization_when_using_SOCP.md)
 
 If you would rather want a sparse solution, you may use 1-norm regularization, just like the lasso regression.
 

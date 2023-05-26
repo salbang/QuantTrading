@@ -1,7 +1,5 @@
 # Speeding up Portfolio Optimization when using SOCP Solver
 
-(author: jjung)
-
 ### When you use SOCP (second order conic problem) solver, you better not form the covariance matrix. Let’s think about the case where we have a decomposed form of a covariance matrix $\Sigma$:
 
 1. $\Sigma = F^TF$

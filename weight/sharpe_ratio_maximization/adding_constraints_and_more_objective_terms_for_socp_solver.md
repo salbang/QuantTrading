@@ -187,19 +187,3 @@ You may have alphas in distinct categories, such as reversion, momentum, group m
 $$
 \sum_{i \in C_k}y_i \le \kappa w_{C_k} \text{ for } k \in \text{ \\{indices of the category you want to limit\\}}
 $$
-
-# Minimum Return Required
-
-For minimum targeting return, $\mu_o$ > 0, noting (1):
-
-$$
-\mu_o \le \mathbf{\mu}^\top\mathbf{w}
-$$
-, which is
-$$
-\mu_o \le \frac{1}{\kappa}\mathbf{\mu}^\top\mathbf{y}
-$$
-, which is equivalent to
-$$
-\kappa {\mu_o} \le \mathbf{mu}^\top\mathbf{y}
-$$

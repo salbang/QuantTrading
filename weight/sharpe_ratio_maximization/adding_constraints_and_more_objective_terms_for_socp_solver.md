@@ -193,9 +193,13 @@ $$
 For minimum targeting return, $\mu_o$ > 0, noting (1):
 
 $$
-\mu_o \le \mathbf{\mu}^\top\mathbf{w}  $$
+\mu_o \le \mathbf{\mu}^\top\mathbf{w}
 $$
-\mu_o \le \frac{1}{\kappa}\mathbf{\mu}^\top\mathbf{y}  $$
+, which is
 $$
-\kappa \le \frac{1}{\mu_o}
+\mu_o \le \frac{1}{\kappa}\mathbf{\mu}^\top\mathbf{y}
+$$
+, which is equivalent to
+$$
+\kappa {\mu_o} \le \mathbf{mu}^\top\mathbf{y}
 $$

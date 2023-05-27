@@ -15,7 +15,7 @@ $$
 \kappa \ge 0
 $$
 
-Remember $\mathbf{w}:=\frac{1}{\kappa}\mathbf{y}$.
+Remember $\mathbf{w}:=\frac{1}{\kappa}\mathbf{y} \space\space\space\space (1)$.
 
 # Size Limit
 

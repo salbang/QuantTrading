@@ -11,7 +11,7 @@ The basic objective is to make the target as close as possible to the ideal alph
 An example of similarity maximization is:
 
 $$
-\min_{\boldsymbol{\alpha}}-\boldsymbol{\alpha}^{o\top} \boldsymbol{\alpha}
+\min_{\boldsymbol{\alpha}}-\boldsymbol{\alpha}^{\mathbf{o}\top} \boldsymbol{\alpha}
 $$
 
 , given that the one norms of $\boldsymbol{\alpha}_0$ and $\boldsymbol{\alpha}$ are fixed, it can be close to correlation, thus similarity.
@@ -30,7 +30,7 @@ $$
 \min_{\boldsymbol{\alpha}}\frac{1}{2}\|\boldsymbol{\alpha}-\boldsymbol{\alpha^o}\|_2^2
 $$
 
-Expanding these yields $\min_{\boldsymbol{\alpha}}\frac{1}{2}\boldsymbol{\alpha}\top\boldsymbol{\alpha}-\boldsymbol{\alpha^o}^\top\boldsymbol{\alpha}$, which is a combination of the similarity maximization and the regularization term $\frac{1}{2}\boldsymbol{\alpha}\top\boldsymbol{\alpha}=\frac{1}{2}\|\boldsymbol{\alpha}\|_2^2$.
+Expanding these yields $\min_{\boldsymbol{\alpha}}\frac{1}{2}\boldsymbol{\alpha}\top\boldsymbol{\alpha}-\boldsymbol{\alpha}^{\mathbf{o}\top}\boldsymbol{\alpha}$, which is a combination of the similarity maximization and the regularization term $\frac{1}{2}\boldsymbol{\alpha}\top\boldsymbol{\alpha}=\frac{1}{2}\|\boldsymbol{\alpha}\|_2^2$.
 
 Alternatively, you may target bigger dot product, then you may use a parameter for regularization $\lambda \in [0, 1]$,
 

@@ -82,15 +82,15 @@ constraints += [
 
 Given a risk model at time $t$ (or $t-1$ if we need a delay because of the data availability) in the form:
 
-$\mathbf{r} = \mathbf{f}^\top\boldsymbol{\Beta} +\epsilon$ 
+$\mathbf{r} = \mathbf{f}^\top\mathbf{B} +\epsilon$ 
 
 , where $\bf{f}$  is the factor return and $\bf{B} \in \mathbb{R}^{k \times n}$ is the matrix of factor exposure beta of assets.
 
 The asset covariance at time $t$ (or $t-1$) derived from the factor model is:
 
 $\mathbf{\Sigma}:=\mathsf{var}(\mathbf{r})
-=\mathsf{var}(\mathbf{f}^\top\mathbf{\Beta}) + \mathsf{var}(\mathbf{\epsilon}) 
-=\mathbf{\Beta}^\top\mathbf{\Omega}\mathbf{\Beta} + \mathbf{S}^2$
+=\mathsf{var}(\mathbf{f}^\top\mathbf{B}) + \mathsf{var}(\mathbf{\epsilon}) 
+=\mathbf{B}^\top\mathbf{\Omega}\mathbf{B} + \mathbf{S}^2$
 
 If the number of assets, $n$, is much larger than the number of factors, $k$, then it is better to factorize the factor covariance, $\bf{\Omega},$ using Cholesky decomposition:
 

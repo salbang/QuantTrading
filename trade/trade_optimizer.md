@@ -45,8 +45,12 @@ objective = 0.5 * lambda * cp.sum_squares(alpha) - alpha_0 @ alpha
 Basic size constraints would look like with the dollar neutrality:
 
 $$
-\min_{\boldsymbol{\alpha}}\frac{1}{2}\|\boldsymbol{\alpha}-\boldsymbol{\alpha}^\mathbf{o}\|_2^2\\
-s.t.\space\space \|\boldsymbol{\alpha} \|_1 \le \|\boldsymbol{\alpha}^\mathbf{o}\|_1 \\
+\min_{\boldsymbol{\alpha}}\frac{1}{2}\|\boldsymbol{\alpha}-\boldsymbol{\alpha}^\mathbf{o}\|_2^2
+$$
+$$
+s.t.\space\space \|\boldsymbol{\alpha} \|_1 \le \|\boldsymbol{\alpha}^\mathbf{o}\|_1
+$$
+$$
 \mathbf{1}^\top\boldsymbol{\alpha}=0
 $$
 

@@ -144,3 +144,25 @@ $$
 $$
 
 A strategy with less systematic risk performs better during market crash (i.e., less MDD), but in usual time, this leads to less return.
+
+# Position Constraints
+
+## Limiting concentration
+
+We may limit the maximum weight allocated on each asset:
+
+$$
+-\psi \|\boldsymbol{\alpha}^o\|_1\le \boldsymbol{\alpha} \le \psi \|\boldsymbol{\alpha}^o\|_1
+$$
+
+Each asset size is limited by 1% of the book size for instance.
+
+## Limiting holding volume with respect to average daily volume
+
+This limit is related to how much cost the portfolio would require when it would need to get liquidated.
+
+$$
+-h_v\boldsymbol{\nu}_h\le \boldsymbol{\alpha} \le h_v\boldsymbol{\nu}_h
+$$
+
+, where $\boldsymbol{\nu}_h$ is the average daily trading volume for N days used for holding limit.

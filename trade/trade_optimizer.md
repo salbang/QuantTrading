@@ -1,7 +1,5 @@
 # Trade Optimizer
 
-(author: jjung)
-
 # Basic Objective
 
 ## Making target close to the ideal alpha/signal

@@ -11,7 +11,7 @@ The basic objective is to make the target as close as possible to the ideal alph
 An example of similarity maximization is:
 
 $$
-\min_{\alpha}-{\boldsymbol{\alpha^o}^\top \boldsymbol{\alpha}}
+\min_{\boldsymbol{\alpha}}-\boldsymbol{\alpha}^{o\top} \boldsymbol{\alpha}
 $$
 
 , given that the one norms of $\boldsymbol{\alpha}_0$ and $\boldsymbol{\alpha}$ are fixed, it can be close to correlation, thus similarity.

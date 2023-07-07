@@ -9,10 +9,10 @@ The basic objective is to make the target as close as possible to the ideal alph
 An example of similarity maximization is:
 
 $$
-\min_{\boldsymbol{\alpha}}-\boldsymbol{\alpha}^{o\top} \boldsymbol{\alpha}
+\min_{\mathbfsymbol{\alpha}}-\mathbfsymbol{\alpha}^{o\top} \mathbfsymbol{\alpha}
 $$
 
-, given that the one norms of $\boldsymbol{\alpha}_0$ and $\boldsymbol{\alpha}$ are fixed, it can be close to correlation, thus similarity.
+, given that the one norms of $\mathbfsymbol{\alpha}_0$ and $\mathbfsymbol{\alpha}$ are fixed, it can be close to correlation, thus similarity.
 
 ```python
 n = len(alpha_0)
@@ -20,20 +20,20 @@ alpha = cp.Variable(n)
 objective = -alpha_0 @ alpha
 ```
 
-Given the ideal target alpha/signal denoted by $\boldsymbol{\alpha^o}$ is, indeed, a representation of our best return prediction of assets, this objective is similar to the return maximization part of Markowitz Portfolio Optimization problem, i.e., $\min_{\bf{w}} -\boldsymbol{\mu}^\top\bf{w}$.
+Given the ideal target alpha/signal denoted by $\mathbfsymbol{\alpha^o}$ is, indeed, a representation of our best return prediction of assets, this objective is similar to the return maximization part of Markowitz Portfolio Optimization problem, i.e., $\min_{\bf{w}} -\mathbfsymbol{\mu}^\top\bf{w}$.
 
 An example of distance minimization is:
 
 $$
-\min_{\boldsymbol{\alpha}}\frac{1}{2}||\boldsymbol{\alpha}-\boldsymbol{\alpha^o}||_2^2
+\min_{\mathbfsymbol{\alpha}}\frac{1}{2}||\mathbfsymbol{\alpha}-\mathbfsymbol{\alpha^o}||_2^2
 $$
 
-Expanding these yields $\min_{\boldsymbol{\alpha}}\frac{1}{2}\boldsymbol{\alpha}\top\boldsymbol{\alpha}-\boldsymbol{\alpha}^{o\top}\boldsymbol{\alpha}$, which is a combination of the similarity maximization and the regularization term $\frac{1}{2}\boldsymbol{\alpha}\top\boldsymbol{\alpha}=\frac{1}{2}||\boldsymbol{\alpha}||_2^2$.
+Expanding these yields $\min_{\mathbfsymbol{\alpha}}\frac{1}{2}\mathbfsymbol{\alpha}\top\mathbfsymbol{\alpha}-\mathbfsymbol{\alpha}^{o\top}\mathbfsymbol{\alpha}$, which is a combination of the similarity maximization and the regularization term $\frac{1}{2}\mathbfsymbol{\alpha}\top\mathbfsymbol{\alpha}=\frac{1}{2}||\mathbfsymbol{\alpha}||_2^2$.
 
 Alternatively, you may target bigger dot product, then you may use a parameter for regularization $\lambda \in [0, 1]$,
 
 $$
-\min_{\boldsymbol{\alpha}}\frac{\lambda}{2}\boldsymbol{\alpha}^\top\boldsymbol{\alpha}-\boldsymbol{\alpha}^{o\top}\boldsymbol{\alpha}
+\min_{\mathbfsymbol{\alpha}}\frac{\lambda}{2}\mathbfsymbol{\alpha}^\top\mathbfsymbol{\alpha}-\mathbfsymbol{\alpha}^{o\top}\mathbfsymbol{\alpha}
 $$
 
 ```python
@@ -45,15 +45,15 @@ objective = 0.5 * lambda * cp.sum_squares(alpha) - alpha_0 @ alpha
 Basic size constraints would look like with the dollar neutrality:
 
 $$
-\min_{\boldsymbol{\alpha}}\frac{1}{2}||\boldsymbol{\alpha}-\boldsymbol{\alpha}^o||_2^2
+\min_{\mathbfsymbol{\alpha}}\frac{1}{2}||\mathbfsymbol{\alpha}-\mathbfsymbol{\alpha}^o||_2^2
 $$
 
 $$
-s.t.\space\space ||\boldsymbol{\alpha} ||_1 \le ||\boldsymbol{\alpha}^o||_1
+s.t.\space\space ||\mathbfsymbol{\alpha} ||_1 \le ||\mathbfsymbol{\alpha}^o||_1
 $$
 
 $$
-\mathbf{1}^\top\boldsymbol{\alpha}=0
+\mathbf{1}^\top\mathbfsymbol{\alpha}=0
 $$
 
 ```python
@@ -64,10 +64,10 @@ constraints += [
 ]
 ```
 
-If you want to have a little long or short exposure relative to the book size you may change $\mathbf{1}^\top\boldsymbol{\alpha}=0$ to 
+If you want to have a little long or short exposure relative to the book size you may change $\mathbf{1}^\top\mathbfsymbol{\alpha}=0$ to 
 
 $$
--\epsilon||\boldsymbol{\alpha}^o||_1\le\mathbf{1}^\top\boldsymbol{\alpha}\le\epsilon||\boldsymbol{\alpha}^o||_1
+-\epsilon||\mathbfsymbol{\alpha}^o||_1\le\mathbf{1}^\top\mathbfsymbol{\alpha}\le\epsilon||\mathbfsymbol{\alpha}^o||_1
 $$
 
 ```python
@@ -82,7 +82,7 @@ constraints += [
 
 Given a risk model at time $t$ (or $t-1$ if we need a delay because of the data availability) in the form:
 
-$\bold{r} = \bold{f}^\top\bold{\Beta} +\epsilon$ 
+$\mathbf{r} = \mathbf{f}^\top\mathbf{\Beta} +\epsilon$ 
 
 , where $\bf{f}$  is the factor return and $\bf{B} \in \mathbb{R}^{k \times n}$ is the matrix of factor exposure beta of assets.
 
@@ -100,10 +100,10 @@ Then we can add the minimization of the risk to the optimization objective:
 
 $$
 \begin{aligned}
-&\min_{\boldsymbol{\alpha}}\frac{1}{2}||\boldsymbol{\alpha}-\boldsymbol{\alpha^o}||_2^2 + \frac{\gamma}{2} \left( \bf{g}^\top\bf{g} + \bf{h}^\top \bf{h} \right) \\
+&\min_{\mathbfsymbol{\alpha}}\frac{1}{2}||\mathbfsymbol{\alpha}-\mathbfsymbol{\alpha^o}||_2^2 + \frac{\gamma}{2} \left( \bf{g}^\top\bf{g} + \bf{h}^\top \bf{h} \right) \\
 s.t. \space&\\
-&\bf{g} = \bf{LB}\boldsymbol{\alpha} \\
-&\bf{h} = \bf{s}\odot\boldsymbol{\alpha}
+&\bf{g} = \bf{LB}\mathbfsymbol{\alpha} \\
+&\bf{h} = \bf{s}\odot\mathbfsymbol{\alpha}
 \end{aligned}
 $$
 
@@ -125,11 +125,11 @@ Let $Q$ be the set of indices for the selected factors, with the upper and lower
 
 $$
 \begin{aligned}
-&\min_{\boldsymbol{\alpha}}\frac{1}{2}||\boldsymbol{\alpha}-\boldsymbol{\alpha^o}||_2^2 + \frac{\gamma}{2} \left( \mathbf{g}^\top\mathbf{g} + \mathbf{h}^\top \mathbf{h} \right) \\
+&\min_{\mathbfsymbol{\alpha}}\frac{1}{2}||\mathbfsymbol{\alpha}-\mathbfsymbol{\alpha^o}||_2^2 + \frac{\gamma}{2} \left( \mathbf{g}^\top\mathbf{g} + \mathbf{h}^\top \mathbf{h} \right) \\
 s.t. \space&\\
-&\mathbf{g} = \mathbf{LB}\boldsymbol{\alpha} \\
-&\mathbf{h} = \mathbf{s}\odot\boldsymbol{\alpha} \\
-&\mathbf{e}_L \le \mathbf{B}_{Q\cdot}\boldsymbol{\alpha} \le \mathbf{e}_U
+&\mathbf{g} = \mathbf{LB}\mathbfsymbol{\alpha} \\
+&\mathbf{h} = \mathbf{s}\odot\mathbfsymbol{\alpha} \\
+&\mathbf{e}_L \le \mathbf{B}_{Q\cdot}\mathbfsymbol{\alpha} \le \mathbf{e}_U
 \end{aligned}
 $$
 

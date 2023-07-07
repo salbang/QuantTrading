@@ -126,9 +126,8 @@ Let $Q$ be the set of indices for the selected factors, with the upper and lower
 
 $$
 \begin{aligned}
-&\min_{\boldsymbol{\alpha}}\frac{1}{2}||\boldsymbol{\alpha}-\boldsymbol{\alpha^o}||_2^2 + \frac{\gamma}{2} \left( \mathbf{g}^\top\mathbf{g} + \mathbf{h}^\top \mathbf{h} \right) \\
-s.t. \space&\\
-&\mathbf{g} = \mathbf{LB}\boldsymbol{\alpha} \\
+\min_{\boldsymbol{\alpha}}\frac{1}{2}||\boldsymbol{\alpha}&-\boldsymbol{\alpha^o}||_2^2 + \frac{\gamma}{2} \left( \mathbf{g}^\top\mathbf{g} + \mathbf{h}^\top \mathbf{h} \right) \\
+s.t. \space\space& \mathbf{g} = \mathbf{LB}\boldsymbol{\alpha} \\
 &\mathbf{h} = \mathbf{s}\odot\boldsymbol{\alpha} \\
 &\mathbf{e}_L \le \mathbf{B}_{Q\cdot}\boldsymbol{\alpha} \le \mathbf{e}_U
 \end{aligned}

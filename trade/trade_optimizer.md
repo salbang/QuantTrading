@@ -182,3 +182,5 @@ If we would like to work on the number of shares term instead of dollar term, we
 $$
 {\boldsymbol{\tau}} := {\boldsymbol{\alpha}} - {\boldsymbol{\alpha}}_{prev} {\odot} ( {\mathbf{1}} + {\mathbf{r}}_p )
 $$
+
+, where $\mathbf{r}_p$ is the return of the previous time tick.

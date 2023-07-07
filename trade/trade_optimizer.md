@@ -167,7 +167,7 @@ $$
 
 , where $\boldsymbol{\nu}_h$ is the average daily trading volume for N days used for holding limit.
 
-# Trade Constraints
+# Trade Constraints and Objectives
 
 First, we define the trade:
 

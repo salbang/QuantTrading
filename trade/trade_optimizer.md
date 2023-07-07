@@ -33,7 +33,7 @@ Expanding these yields $\min_{\boldsymbol{\alpha}}\frac{1}{2}\boldsymbol{\alpha}
 Alternatively, you may target bigger dot product, then you may use a parameter for regularization $\lambda \in [0, 1]$,
 
 $$
-\min_{\boldsymbol{\alpha}}\frac{\lambda}{2}\boldsymbol{\alpha}\top\boldsymbol{\alpha}-\boldsymbol{\alpha}^{\mathbf{o}\top}\boldsymbol{\alpha}
+\min_{\boldsymbol{\alpha}}\frac{\lambda}{2}\boldsymbol{\alpha}^\top\boldsymbol{\alpha}-\boldsymbol{\alpha}^{\mathbf{o}\top}\boldsymbol{\alpha}
 $$
 
 ```python

@@ -200,3 +200,11 @@ $$
 , where $\boldsymbol{\nu}_t$ is the average daily trading volume for N’ days used for trading limit. It is better to use shorter period of average daily trading volume for trading limit than that used for holding volume limit. Short period of average daily trading volume has better prediction power for the next day than longer period. If you use too short period of average daily volume for holding volume limit, it fluctuates too much and induces unnecessary noise to the final alpha value.
 
 If we can have a better prediction for expected trading volume of next day, we may use it.
+
+## Reducing transaction cost (expected slippage)
+
+Let $\mathbf{c}$ be the slippage vector (could be past N’’ days average of spread-slippage, for instance),
+
+$$
+\min_{\boldsymbol{\alpha}}\frac{1}{2}\|\boldsymbol{\alpha}-\boldsymbol{\alpha^o}\|_2^2 + \frac{\gamma}{2} \left( \mathbf{g}^\top\mathbf{g} + \mathbf{h}^\top \mathbf{h} \right) + \xi \|\mathbf{c}\odot\boldsymbol{\tau}\|_1
+$$

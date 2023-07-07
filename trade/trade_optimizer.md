@@ -101,12 +101,15 @@ $\bf{\Omega}:= \bf{L}^\top\bf{L}$
 Then we can add the minimization of the risk to the optimization objective:
 
 $$
-\begin{aligned}
-&\min_{\boldsymbol{\alpha}}\frac{1}{2}||\boldsymbol{\alpha}-\boldsymbol{\alpha^o}||_2^2 + \frac{\gamma}{2} \left( \bf{g}^\top\bf{g} + \bf{h}^\top \bf{h} \right) \\
-s.t. \space&\\
-&\bf{g} = \bf{LB}\boldsymbol{\alpha} \\
-&\bf{h} = \bf{s}\odot\boldsymbol{\alpha}
-\end{aligned}
+\min_{\boldsymbol{\alpha}}\frac{1}{2}||\boldsymbol{\alpha}-\boldsymbol{\alpha^o}||_2^2 + \frac{\gamma}{2} \left( \bf{g}^\top\bf{g} + \bf{h}^\top \bf{h} \right)
+$$
+
+$$
+s.t. \bf{g} = \bf{LB}\boldsymbol{\alpha} 
+$$
+
+$$
+\bf{h} = \bf{s}\odot\boldsymbol{\alpha}
 $$
 
 , where $\gamma$ is a **risk aversion** parameter and $\mathbf{s}:=\text{diag}(\mathbf{S})$.

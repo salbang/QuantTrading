@@ -167,7 +167,7 @@ $$
 
 , where $\boldsymbol{\nu}_h$ is the average daily trading volume for N days used for holding limit.
 
-# Trade Objectives and Constraints
+# Trade Constraints
 
 First, we define the trade:
 
@@ -184,3 +184,19 @@ $$
 $$
 
 , where $\mathbf{r}_p$ is the return of the previous time tick.
+
+## Limiting turnover
+
+$$
+-\tau_{max} \le \boldsymbol{\tau} \le \tau_{max}
+$$
+
+## Limiting transaction volume with respect to average daily volume
+
+$$
+-\tau_v\boldsymbol{\nu}_t\le \boldsymbol{\tau} \le \tau_v\boldsymbol{\nu}_t
+$$
+
+, where $\boldsymbol{\nu}_t$ is the average daily trading volume for N’ days used for trading limit. It is better to use shorter period of average daily trading volume for trading limit than that used for holding volume limit. Short period of average daily trading volume has better prediction power for the next day than longer period. If you use too short period of average daily volume for holding volume limit, it fluctuates too much and induces unnecessary noise to the final alpha value.
+
+If we can have a better prediction for expected trading volume of next day, we may use it.

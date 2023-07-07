@@ -129,12 +129,9 @@ $$
 \min_{\boldsymbol{\alpha}}\frac{1}{2}||\boldsymbol{\alpha}&-\boldsymbol{\alpha^o}||_2^2 + \frac{\gamma}{2} \left( \mathbf{g}^\top\mathbf{g} + \mathbf{h}^\top \mathbf{h} \right) \\
 s.t. \space\space& \mathbf{g} = \mathbf{LB}\boldsymbol{\alpha} \\
 &\mathbf{h} = \mathbf{s}\odot\boldsymbol{\alpha} \\
+&\mathbf{e}_L \le \mathbf{B}_{Q\cdot}\boldsymbol{\alpha} \le \mathbf{e}_U
 \end{aligned}
 $$
-
-% &\mathbf{e}_L \le \mathbf{B}_{Q\cdot}\boldsymbol{\alpha} \le \mathbf{e}_U
-% \end{aligned}
-% $$
 
 , where $\mathbf{B}_{Q\cdot}$ is the sub-matrix of $\bf{B}$ where only the rows are indexed by $Q$. In numpy notation: $\mathbf{B}_{Q\cdot}$ is B[Q, :]. 
 

@@ -50,7 +50,7 @@ $$
 \begin{aligned}
 &\min_{\mathbf{w}, t, \mathbf{f}} ... + 0.5 * c * t + ... \\
 &s.t. \space
-\|\mathbf{f}\|\le\sqrt{t}
+||\mathbf{f}||\le\sqrt{t}
 \end{aligned}
 $$
 

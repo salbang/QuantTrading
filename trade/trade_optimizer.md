@@ -88,9 +88,11 @@ $\mathbf{r} = \mathbf{f}^\top\mathbf{B} +\epsilon$
 
 The asset covariance at time $t$ (or $t-1$) derived from the factor model is:
 
-$\mathbf{\Sigma}:=\mathsf{var}(\mathbf{r})
+$$
+\mathbf{\Sigma}:=\mathsf{var}(\mathbf{r})
 =\mathsf{var}(\mathbf{f}^\top\mathbf{B}) + \mathsf{var}(\mathbf{\epsilon}) 
-=\mathbf{B}^\top\mathbf{\Omega}\mathbf{B} + \mathbf{S}^2$
+=\mathbf{B}^\top\mathbf{\Omega}\mathbf{B} + \mathbf{S}^2
+$$
 
 If the number of assets, $n$, is much larger than the number of factors, $k$, then it is better to factorize the factor covariance, $\bf{\Omega},$ using Cholesky decomposition:
 

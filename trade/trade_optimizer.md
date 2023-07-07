@@ -166,3 +166,19 @@ $$
 $$
 
 , where $\boldsymbol{\nu}_h$ is the average daily trading volume for N days used for holding limit.
+
+# Trade Objectives and Constraints
+
+First, we define the trade:
+
+$$
+\boldsymbol{\tau}:= \boldsymbol{\alpha}-\boldsymbol{\alpha}_{prev}
+$$
+
+, where $\boldsymbol{\alpha}_{prev}$ is the position vector of the previous time tick.
+
+If we would like to work on the number of shares term instead of dollar term, we need to consider the price changes of $\boldsymbol{\alpha}_{prev}$. In such case:
+
+$$
+\boldsymbol{\tau}:=\boldsymbol{\alpha}-\boldsymbol{\alpha}_{prev}\odot(\mathbf{1}+\mathbf{r}_{prev})
+$$

@@ -180,5 +180,5 @@ $$
 If we would like to work on the number of shares term instead of dollar term, we need to consider the price changes of $\boldsymbol{\alpha}_{prev}$. In such case:
 
 $$
-\boldsymbol{\tau}:=\boldsymbol{\alpha}-\boldsymbol{\alpha}_{prev}\odot(\mathbf{1}+\mathbf{r}_{prev})
+{\boldsymbol{\tau}} := {\boldsymbol{\alpha}} - {\boldsymbol{\alpha}}_{prev} {\odot} ( {\mathbf{1}} + {\mathbf{r}}_p )
 $$

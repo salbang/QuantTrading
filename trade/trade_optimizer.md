@@ -82,7 +82,7 @@ constraints += [
 
 Given a risk model at time $t$ (or $t-1$ if we need a delay because of the data availability) in the form:
 
-$\mathbf{r} = \mathbf{f}^\top\mathbf{\Beta} +\epsilon$ 
+$\mathbf{r} = \mathbf{f}^\top\boldsymbol{\Beta} +\epsilon$ 
 
 , where $\bf{f}$  is the factor return and $\bf{B} \in \mathbb{R}^{k \times n}$ is the matrix of factor exposure beta of assets.
 

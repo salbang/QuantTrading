@@ -135,7 +135,7 @@ $$
 
 % &\mathbf{e}_L \le \mathbf{B}_{Q\cdot}\boldsymbol{\alpha} \le \mathbf{e}_U
 
-, where $\mathbf{B}_{Q\cdot}$ is the sub-matrix of $\bf{B}$ where only the rows are indexed by $Q$. In numpy notation: $\mathbf{B}_{Q\cdot}$ is B[Q, :]. 
+<!-- , where $\mathbf{B}_{Q\cdot}$ is the sub-matrix of $\mathbf{B}$ where only the rows are indexed by $Q$. In numpy notation: $\mathbf{B}_{Q\cdot}$ is B[Q, :].  -->
 
 ## Limiting systematic risk
 

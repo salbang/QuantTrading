@@ -56,7 +56,8 @@ def max_sharpe(R, turnover, w_L, w_U, diversity_coefficient):
 	y = cp.Variable(n)
 	kappa = cp.Varianble(1)
 
-	f = R @ y # Note that 1 / (m - 1) * f.T @ f is y.T @ Sigma @ y
+	R_bar = R - mu[None, :]
+	f = R_bar @ y # Note that 1 / (m - 1) * f.T @ f is y.T @ Sigma @ y
 	
 	constraints += [
 		0 <= kappa,

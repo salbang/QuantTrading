@@ -121,6 +121,16 @@ $$
 
 [Speeding up Portfolio Optimization when using SOCP Solver](../speeding_up_portfolio_optimization_when_using_SOCP.md)
 
+```python
+	objective = (1. - lambda) * 0.5 / (m - 1) * f.T @ f + lambda * y_2norm * y_2norm
+	constraints += [
+		cp.norm(y, 2) <= y_2norm,
+	]
+	... # More constraints and objective terms
+
+	prob = cp.Problem(cp.Minimize(objective), constraints)
+```
+
 If you would rather want a sparse solution, you may use 1-norm regularization, just like the lasso regression.
 
 ## 2. As a Constraint
@@ -150,7 +160,7 @@ $$
 This would be implemented as:
 
 ```python
-	constraints += [ cp.norm(y, 4) <= diversity_coefficient * cp.norm(y, 2) ]
+	constraints += [ cp.norm(y, 4) <= diversity_coefficient * y_2norm ]
 ```
 
 # Turnover Control

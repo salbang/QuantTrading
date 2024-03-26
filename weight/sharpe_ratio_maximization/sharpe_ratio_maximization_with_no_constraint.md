@@ -46,7 +46,7 @@ Simple solution acquired from the first line of the two equations is:
 
 $$\mathbf{y}=\lambda\mathbf{\Sigma}^{-1}\mathbf{\mu}$$
 
-Since the original problem is scale invariant with respect to $\mathbf{w}$, it is not important to get the exact $\lambda$. You can just assume $\lambda$ be 1 or any other positive scalar value then scale $\mathbf{y}$ so that $\mathbf{w}$ becomes either $\mathbf{e}^\top\mathbf{w}=1$, where $\mathbf{e}$ is the vector of all 1 as its elements, or  $\|\mathbf{w}\|_1 = 1$. **(Never, ever use the matrix inverse to get the solution!!!)**
+Since the original problem is scale invariant with respect to $\mathbf{w}$, it is not important to get the exact $\lambda$. You can just assume $\lambda$ be 1 or any other positive scalar value then scale $\mathbf{y}$ so that $\mathbf{w}$ becomes either $\mathbf{e}^\top\mathbf{w}=1$, where $\mathbf{e}$ is the vector of all 1 as its elements, or  $||\mathbf{w}||_1 = 1$. $\color{red}\textsf{(Never, ever use the matrix inverse to get the solution!!!)}$
 
 The optimal solution is, indeed, the same as the typical unconstrained Markowitz mean-variance portfolio optimization problem:
 

@@ -9,10 +9,11 @@ $$
 To the above basic formula, we may add constraints such as size limit, upper/lower bounds, long/short balance and etc. Exploiting the scale invariance which is used in the non-constrained case is still useful.
 
 $$
-\min_{\mathbf{y}, \kappa} \frac{1}{2}\mathbf{y}^T \mathbf{\Sigma} \mathbf{y} $$
-$$ s.t.\space \mathbf{\mu}^\top \mathbf{y}=1 \space\space\space\space\space\space\space\space\space\space(1) $$
-$$
+\displaylines{
+\min_{\mathbf{y}, \kappa} \frac{1}{2}\mathbf{y}^T \mathbf{\Sigma} \mathbf{y} \\
+s.t.\space \mathbf{\mu}^\top \mathbf{y}=1 \space\space\space\space\space\space\space\space\space\space(1) \\
 \kappa \ge 0
+}
 $$
 
 Remember $\mathbf{w}:=\frac{1}{\kappa}\mathbf{y} \space\space\space\space (1)$.
@@ -28,7 +29,10 @@ $$
 , which is equivalent to:
 
 $$
-||\mathbf{y}||_1=\kappa \space\space\space\space\space\space\space\space \text{ (2)}
+\displaylines{
+||\mathbf{y}||_1=\kappa \space\space\space\space\space\space\space\space \text{ (2)} \\
+\kappa \ge 0
+}
 $$
 
 However, (2) is not convex and cannot be fed into SOCP solver. An alternative would be:
@@ -74,21 +78,19 @@ def max_sharpe(R, turnover, w_L, w_U, diversity_coefficient):
 
 If you want to have long bias, then you may instead make the sum of the value of the weights 1, i.e.:
 
-$$
-\mathbf{e}^\top\mathbf{y} = \kappa$$
-$$
+$$ \displaylines{
+\mathbf{e}^\top\mathbf{y} = \kappa \\
 \kappa \ge 0
-$$
+}$$
 
 # Upper/Lower Bounds
 
 For $\mathbf{w}_U$, upper bounds, and $\mathbf{w}_L$, lower bounds, simply add:
 
-$$
-\kappa \mathbf{w}_L \le \mathbf{y} $$
-$$
+$$ \displaylines{
+\kappa \mathbf{w}_L \le \mathbf{y} \\
 \mathbf{y} \le \kappa \mathbf{w}_U
-$$
+} $$
 
 This would be implemented as:
 
@@ -139,11 +141,10 @@ We can use the difference of the norm values of $\mathbf{w}$, equivalently $\mat
 
 A fully diversified portfolio would be allocating equal weight to the alphas. In such case, the norm values would be:
 
-$$
-||\mathbf{w}||_2=\bigg(\frac{1}{m}\bigg)^\frac{1}{2} $$
-$$
+$$ \displaylines{
+||\mathbf{w}||_2=\bigg(\frac{1}{m}\bigg)^\frac{1}{2} \\
 ||\mathbf{w}||_4=\bigg(\frac{1}{m}\bigg)^\frac{1}{4}
-$$
+} $$
 
 The ratio is then
 
@@ -172,16 +173,25 @@ $$\min_{\mathbf{y}, \kappa} ...+\tau ||\mathbf{t}\odot\mathbf{y}||_1$$
 If you are concerned that the minimization of the variance part is quadratic and the turnover penalization is linear, then you may make the turnover penalization quadratic
     
 $$
-    \min_{\mathbf{y},\kappa,t}...+\tau t $$
+\displaylines{
+\min_{\mathbf{y},\kappa,t}...+\tau t \\
+s.t. \space ||\mathbf{t}\odot\mathbf{y}|| <= \sqrt{t}
+}
 $$
-    s.t. \space ||\mathbf{t}\odot\mathbf{y}|| <= \sqrt{t}
-    $$
     
 2. You may limit the maximum portfolio turnover, $\tau_U$, as constraints:
+
 $$
 ||\mathbf{t}\odot\mathbf{y}||_1 \le \kappa \tau_U
 $$
-    
+
+This would be implemented as: (zero turnover is non-sensical)
+```python
+	if max_turnover > 0:
+		constraints += [ 
+			cp.norm(cp.multiply(average_turnover, y), 1) <= kappa * max_turnover 
+		]
+```
 
 # Transaction Cost Penalization
 
@@ -198,3 +208,12 @@ You may have alphas in distinct categories, such as reversion, momentum, group m
 $$
 \sum_{i \in C_k}y_i \le \kappa w_{C_k} \text{ for } k \in \text{ \\{indices of the category you want to limit\\}}
 $$
+
+# Minimum Return Required
+For minimum targeting return, $\mu_o$ > 0, noting (1):
+
+$$ \displaylines{
+\mu_o \le \mathbf{\mu}^\top\mathbf{w} \\
+\mu_o \le \frac{1}{\kappa}\mathbf{\mu}^\top\mathbf{y} \\
+\kappa \le \frac{1}{\mu_o}
+} $$

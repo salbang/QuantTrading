@@ -34,7 +34,7 @@ $$
 
 where $U$ is an $m \times m$ orthogonal matrix, S is an $m \times m$ matrix with singular values on the diagonal in descending order (i.e., $s_i \ge s_j\space for\space i > j$), and $V$ is an $n\times m$ matrix where each columns are in unit length and are mutually orthogonal, i.e.,  $V^TV = I_m$, where $I_m$ is an identity matrix of size $m\times m$.
 
-The rank you would like to best approximate the covariance is up to your discretion. You may decide the rank based on the variance that the approximation can explain. For instance, if you want to make the approximation explain at least 95% of the empirical covariance, you may find the smallest $k$ which satisfies $\sum_i^k s_i^2 \ge 0.95 * \sum_i^m s_i^2$.
+The rank you would like to best approximate the covariance is up to your discretion. You may decide the rank based on the variance that the approximation can explain. For instance, if you want to make the approximation explain at least 95% of the empirical covariance, you may find the smallest $k$ which satisfies ${\sum}_i^k s_i^2 \ge 0.95 * {\sum_i}^m s_i^2$.
 
 Assuming $k$ is decided, the approximation to the covariance is
 

@@ -64,4 +64,4 @@ $$
 
 , where $\mathbf{U}$ is an upper triangular matrix. If $\mathbf{\Sigma}$ is rank deficient, you may use incomplete Cholesky factorization with pivoting, QR factorization with pivoting, or SVD, although it is not recommended to use such a rank deficient covariance. Refer to 
 
-[Dealing Covariance Rank Deficiency: Shrinkage or Truncated PCA](https://www.notion.so/Dealing-Covariance-Rank-Deficiency-Shrinkage-or-Truncated-PCA-2dffa623b9524f4c822316213cc68956)
+[Dealing Covariance Rank Deficiency: Shrinkage or Truncated PCA](./dealing_covariance_rank_deficiency/dealing_covariance_rank_deficiency.md)

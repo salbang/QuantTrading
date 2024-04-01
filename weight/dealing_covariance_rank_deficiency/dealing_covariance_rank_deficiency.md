@@ -65,6 +65,6 @@ g = np.sqrt(np.sum(np.square(V[:, k] * s[None, k:]), axis=1, keepdims=True)))
 
 Indeed, you don’t need to form the full covariance matrix if you are going to use it for conic optimization. Refer to 
 
-[Speeding up Portfolio Optimization when using SOCP Solver](https://www.notion.so/Speeding-up-Portfolio-Optimization-when-using-SOCP-Solver-658d2e331a8f4c1399e0291e17e01311?pvs=21)
+[Speeding up Portfolio Optimization when using SOCP Solver](../speeding_up_portfolio_optimization_when_using_SOCP.md)
 
-[When do improved covariance matrix estimators enhance portfolio optimization? An empirical comparative study of nine estimators [](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1596865)](https://www.notion.so/When-do-improved-covariance-matrix-estimators-enhance-portfolio-optimization-An-empirical-comparati-c6eb8c23cd454c539af8865751402e22?pvs=21)
+[When do improved covariance matrix estimators enhance portfolio optimization? An empirical comparative study of nine estimators [](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1596865)]

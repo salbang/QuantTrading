@@ -15,7 +15,8 @@ $$
 Note that the objective function is scale invariant. Thus, we can use the same technique we exploited in Sharpe ratio maximization.
 
 $$ \displaylines{
-\min_\mathbf{y, \kappa} \text{DR}(\mathbf{Ry}) \\ s.t.\space \boldsymbol{\mu}^\top \mathbf{y}=1 \space\space\space\space\space\space\space\space\space\space(1)
+\min_\mathbf{y, \kappa} \text{DR}(\mathbf{Ry}) \\ 
+s.t.\space \boldsymbol{\mu}^\top \mathbf{y}=1 \space\space\space\space\space\space\space\space\space\space(1)
 } $$
 
 , where $\mathbf{y}:=\kappa \mathbf{w}$.
@@ -31,7 +32,7 @@ $$
 Then the constraints for the downside risk will be:
 
 $$
-\frac{1}{\sqrt{m - 1}}\|\mathbf{d}\|_2 <= q
+\frac{1}{\sqrt{m - 1}}||\mathbf{d}||_2 <= q
 $$
 
 Now the problem can be formulated as:
@@ -39,7 +40,7 @@ Now the problem can be formulated as:
 $$ \displaylines{
 \min_{\mathbf{y}, \kappa, \mathbf{d}, q} q \\ 
 s.t.\space \boldsymbol{\mu}^\top \mathbf{y}=1 \\
-\mathbf{e}^\top\mathbf{y}=\kappa \text{ or } \|\mathbf{y}\|_1 \le \kappa \\
+\mathbf{e}^\top\mathbf{y}=\kappa \text{ or } ||\mathbf{y}||_1 \le \kappa \\
 0 \le \kappa\\
 \text{maximum}(-\mathbf{Ry}, \space \mathbf{0}) \le \mathbf{d} \\
 \|\mathbf{d}\|_2 <= q

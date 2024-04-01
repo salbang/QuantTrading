@@ -67,4 +67,4 @@ Indeed, you don’t need to form the full covariance matrix if you are going to 
 
 [Speeding up Portfolio Optimization when using SOCP Solver](../speeding_up_portfolio_optimization_when_using_SOCP.md)
 
-[When do improved covariance matrix estimators enhance portfolio optimization? An empirical comparative study of nine estimators](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1596865)]
+[When do improved covariance matrix estimators enhance portfolio optimization? An empirical comparative study of nine estimators](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1596865)

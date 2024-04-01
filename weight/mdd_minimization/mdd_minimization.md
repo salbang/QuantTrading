@@ -44,7 +44,7 @@ $$
 Now we can minimize the maximum drawdown:
 
 $$
-\min_{\mathbf{w, d, h, c}} \mathbf{\mu}^\top\mathbf{w} + \lambda\|\mathbf{d}\|_\infty
+\min_{\mathbf{w, d, h, c}} \mathbf{\mu}^\top\mathbf{w} + \lambda||\mathbf{d}||_\infty
 $$
 
 $$ \displaylines{
@@ -52,7 +52,7 @@ s.t. \space\space \mathbf{c} = \text{cumsum}(\mathbf{Rw}) \\
 \max(c_0, 0) \le h_0 \\
 \max(c_t, \space h_{t-1}) \le h_i, \space\space\space\space \forall t \in \{1, 2, ..., m-1\} \\
 \mathbf{d} = \mathbf{h} - \mathbf{c} \\
-\|\mathbf{w}\|_1 \le 1
+||\mathbf{w}||_1 \le 1
 } $$
 
 It is also possible to use this objective together with Sharpe ratio maximization or mean-variance optimization.
@@ -70,8 +70,8 @@ $$ \displaylines{
 s.t.\space\space \mathbf{\mu}^\top \mathbf{y} = 1
 } $$
 
-For the size constraint, add either $\|\mathbf{y}\|_1 \le \kappa$ or $\mathbf{e}^\top\mathbf{y}=\kappa$.
+For the size constraint, add either $||\mathbf{y}||_1 \le \kappa$ or $\mathbf{e}^\top\mathbf{y}=\kappa$.
 
 # Caution!
 
-**When we have more alphas/signals than the time intervals, i.e., $m \ll n$, then there exists more than one weight that make MDD zero**. In such case, it is better to use this optimization with any regularization method such as Tikhonov regularization, i.e., adding $\lambda\|\mathbf{w}\|_2^2$.
+**When we have more alphas/signals than the time intervals, i.e., $m \ll n$, then there exists more than one weight that make MDD zero**. In such case, it is better to use this optimization with any regularization method such as Tikhonov regularization, i.e., adding $\lambda||\mathbf{w}||_2^2$.

@@ -15,7 +15,7 @@ $$
 Note that the objective function is scale invariant. Thus, we can use the same technique we exploited in Sharpe ratio maximization.
 
 $$
-\min_\mathbf{y, \kappa} \text{DR}(\mathbf{Ry}) \newline s.t.\space \bm{\mu}^\top \mathbf{y}=1 \space\space\space\space\space\space\space\space\space\space(1)
+\min_\mathbf{y, \kappa} \text{DR}(\mathbf{Ry}) \newline s.t.\space \boldsymbol{\mu}^\top \mathbf{y}=1 \space\space\space\space\space\space\space\space\space\space(1)
 $$
 
 , where $\mathbf{y}:=\kappa \mathbf{w}$.
@@ -37,7 +37,7 @@ $$
 Now the problem can be formulated as:
 
 $$
-\min_{\mathbf{y}, \kappa, \mathbf{d}, q} q \newline s.t.\space \bm{\mu}^\top \mathbf{y}=1 \newline
+\min_{\mathbf{y}, \kappa, \mathbf{d}, q} q \newline s.t.\space \boldsymbol{\mu}^\top \mathbf{y}=1 \newline
 \mathbf{e}^\top\mathbf{y}=\kappa \text{ or } \|\mathbf{y}\|_1 \le \kappa \newline
 0 \le \kappa\newline
 \text{maximum}(-\mathbf{Ry}, \space \mathbf{0}) \le \mathbf{d} \newline

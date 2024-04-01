@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "Please cite it as below."
 authors:
 - family-names: "Jung"
   given-names: "Jin Hyuk"
@@ -8,4 +8,12 @@ title: "Quantitative Trading"
 version: 1.0.0
 date-released: 2023-03-26
 url: "https://github.com/salbang/QuantTrading/"
-type: article
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Jung"
+    given-names: "Jin Hyuk"
+    orcid: "https://orcid.org/0009-0006-9499-1985"
+  title: "Quantitative Trading"
+  date-released: 2023-03-26
+  url: "https://github.com/salbang/QuantTrading/"

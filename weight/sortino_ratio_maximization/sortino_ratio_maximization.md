@@ -3,10 +3,10 @@
 Unlike Sharpe ratio, Sortino ratio only considers the downside variance as risk. Maximization of the ratio can be formulated as:
 
 $$
-\max_\mathbf{w}\frac{\bm{\mu}^\top\mathbf{w}}{\text{DR}(\mathbf{Rw})}
+\max_\mathbf{w}\frac{\boldsymbol{\mu}^\top\mathbf{w}}{\text{DR}(\mathbf{Rw})}
 $$
 
-, where $\mathbf{R}\in\mathbb{R}^{m \times n}$ and $\mathbf{w} \in \mathbb{R}^n$. $\bm{\mu}$ is the vector of average return, $m$ is the number of time intervals and $n$ is the number of assets/signals/alphas. $\text{DR}(\cdot)$ is the function that outputs the downside deviation:
+, where $\mathbf{R}\in\mathbb{R}^{m \times n}$ and $\mathbf{w} \in \mathbb{R}^n$. $\boldsymbol{\mu}$ is the vector of average return, $m$ is the number of time intervals and $n$ is the number of assets/signals/alphas. $\text{DR}(\cdot)$ is the function that outputs the downside deviation:
 
 $$
 \text{DR}(\mathbf{r}):=\sqrt{\sum_{t=0}^{m-1} \max(-r_t, \space 0)^2}

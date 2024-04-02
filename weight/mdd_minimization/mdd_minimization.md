@@ -2,7 +2,7 @@
 Other than maximizing Sharpe ratio of a portfolio, minimizing the portfolio’s maximum drawdown (MDD) would be an interesting objective. While both Sharpe ratio maximization and Markowitz mean-variance portfolio optimization considers variance as risk, MDD minimization considers downside risk only. Considering variance as risk also penalizes upside rewards, which is the reason why the Markowitz portfolio optimization problem is often criticized. 
 
 $$
-\min_{\mathbf{w}} \mathbf{\mu}^\top\mathbf{w} + \lambda\cdot\text{MDD}(\mathbf{R}, \mathbf{w})
+\min_{\mathbf{w}} \boldsymbol{\mu}^\top\mathbf{w} + \lambda\cdot\text{MDD}(\mathbf{R}, \mathbf{w})
 $$
 
 Modeling this is a bit tricky, but not quite complex. First, we need to form a time series of portfolio return:
@@ -44,7 +44,7 @@ $$
 Now we can minimize the maximum drawdown:
 
 $$
-\min_{\mathbf{w, d, h, c}} \mathbf{\mu}^\top\mathbf{w} + \lambda||\mathbf{d}||_\infty
+\min_{\mathbf{w, d, h, c}} \boldsymbol{\mu}^\top\mathbf{w} + \lambda||\mathbf{d}||_\infty
 $$
 
 $$ \displaylines{
@@ -60,14 +60,14 @@ It is also possible to use this objective together with Sharpe ratio maximizatio
 # Maximization of Average Return over MDD
 
 $$
-\max_\mathbf{w} \frac{\mathbf{\mu}^\top\mathbf{w}}{\text{MDD}(\mathbf{R},\mathbf{w})}
+\max_\mathbf{w} \frac{\boldsymbol{\mu}^\top\mathbf{w}}{\text{MDD}(\mathbf{R},\mathbf{w})}
 $$
 
 Note the above maximization problem is also scale invariant with respect to $\mathbf{w}$. Thus, we can use the same technique used in Sharpe ratio maximization also to this problem.
 
 $$ \displaylines{
 \min_{\mathbf{y}, \kappa} \text{MDD}(\mathbf{R}, \mathbf{y}) \\
-s.t.\space\space \mathbf{\mu}^\top \mathbf{y} = 1
+s.t.\space\space \boldsymbol{\mu}^\top \mathbf{y} = 1
 } $$
 
 For the size constraint, add either $||\mathbf{y}||_1 \le \kappa$ or $\mathbf{e}^\top\mathbf{y}=\kappa$.

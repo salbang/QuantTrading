@@ -65,4 +65,4 @@ You may add more terms to the objective function and more constraints to the pro
 
 # Caution!
 
-If $m \ll n$, there is a linear combination of the columns of $\mathbf{R}$ that makes the variance of the portfolio 0. Therefore, it is recommended to use regularization in such a case.
+If $m \lt n$, there is a linear combination of the columns of $\mathbf{R}$ that makes the variance of the portfolio 0. Therefore, it is recommended to use regularization in such a case.

@@ -94,6 +94,8 @@ $$
 =\mathbf{B}^\top\mathbf{\Omega}\mathbf{B} + \mathbf{S}^2
 $$
 
+, where $\bf{S}$ is the specific risk matrix which is diagonal.
+
 If the number of assets, $n$, is much larger than the number of factors, $k$, then it is better to factorize the factor covariance, $\bf{\Omega},$ using Cholesky decomposition:
 
 $\bf{\Omega}:= \bf{L}^\top\bf{L}$
@@ -108,7 +110,7 @@ s.t. \space\space & \bf{g} = \bf{LB}\boldsymbol{\alpha} \\
 \end{aligned}
 $$
 
-, where $\gamma$ is a **risk aversion** parameter and $\mathbf{s}:=\text{diag}(\mathbf{S})$.
+, where $\gamma$ is a **risk aversion** parameter and $\mathbf{s}$ is the vector version of the specific risk matrix, $\mathbf{s}:=\text{diag}(\mathbf{S})$.
 
 ```python
 objective += 0.5 * risk_coefficient * (g @ g + h @ h)

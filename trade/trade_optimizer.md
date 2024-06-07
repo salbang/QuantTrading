@@ -145,6 +145,18 @@ $$
 \mathbf{g}^\top\mathbf{g} \le \xi
 $$
 
+If we want to limit the systematic risk relative to the total risk, we need a estimation of the total risk, which might be estimated from the total risk of the target of the previous interval, $\boldsymbol{\alpha}_{prev}$, which leads to:
+
+$$
+\mathbf{g}^\top\mathbf{g} \le \xi \boldsymbol{\alpha}^\top_{prev}\boldsymbol{\Sigma}\boldsymbol{\alpha}_{prev}
+$$
+
+or
+
+$$
+\mathbf{g}^\top\mathbf{g} \le \xi {\boldsymbol{\alpha}^\top_{prev}} {\boldsymbol{\Sigma_{\textit{prev}}}} \boldsymbol{\alpha}_{prev}
+$$
+
 A strategy with less systematic risk performs better during market crash (i.e., less MDD), but in usual time, this leads to less return.
 
 # Position Constraints

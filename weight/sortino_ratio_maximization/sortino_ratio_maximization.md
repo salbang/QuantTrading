@@ -48,4 +48,4 @@ s.t.\space \boldsymbol{\mu}^\top \mathbf{y}=1 \\
 
 # Caution!
 
-As always, if $m \ll n$, there is a linear combination of the columns of $\mathbf{R}$ that makes the variance of the portfolio 0 and, thus, downside risk 0, too. Therefore, it is recommended to use regularization in such a case.
+As always, if $m \ll n$, there is a linear combination of the columns of $\mathbf{R}$ that makes the second moment of the portfolio 0 and, thus, downside risk 0, too. Therefore, it is recommended to use regularization in such a case.

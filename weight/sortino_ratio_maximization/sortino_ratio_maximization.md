@@ -32,7 +32,7 @@ $$
 Then the constraints for the downside risk will be:
 
 $$
-\frac{1}{\sqrt{m - 1}}||\mathbf{d}||_2 <= q
+\frac{1}{\sqrt{m - 1}}||\mathbf{d}||_2 \le q
 $$
 
 Now the problem can be formulated as:
@@ -43,7 +43,7 @@ s.t.\space \boldsymbol{\mu}^\top \mathbf{y}=1 \\
 \mathbf{e}^\top\mathbf{y}=\kappa \text{ or } ||\mathbf{y}||_1 \le \kappa \\
 0 \le \kappa\\
 \text{maximum}(-\mathbf{Ry}, \space \mathbf{0}) \le \mathbf{d} \\
-\frac{1}{\sqrt{m-1}}||\mathbf{d}||_2 <= q
+\frac{1}{\sqrt{m-1}}||\mathbf{d}||_2 \le q
 } $$
 
 # Caution!
